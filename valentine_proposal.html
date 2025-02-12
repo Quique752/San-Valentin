@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffc0cb;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://www.publicdomainpictures.net/pictures/320000/velka/pink-floral-background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #e63946;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #e63946;
+        }
+        .no {
+            background-color: #cccccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi San Valentín mi niña hermosa y mi bella durmiente? :) ❤️</h1>
+        <div class="buttons">
+            <button class="yes" onclick="showLove()">¡Sí! 💕</button>
+            <button class="no" onmouseover="moveButton(this)">No 😢</button>
+        </div>
+        <p id="loveMessage" style="display: none; color: #e63946; font-size: 20px; margin-top: 20px;"></p>
+    </div>
+    <script>
+        function showLove() {
+            document.getElementById("loveMessage").innerText = "Gracias por aceptar ser mi san valentín mi amor, te amo infinitamente y quiero hacerte feliz siempre, el viernes lo festejaremos juntos :) ❤️";
+            document.getElementById("loveMessage").style.display = "block";
+        }
+        function moveButton(button) {
+            const x = Math.random() * (window.innerWidth - button.clientWidth);
+            const y = Math.random() * (window.innerHeight - button.clientHeight);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
